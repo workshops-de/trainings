@@ -2,7 +2,7 @@
 
 PROJECT_COUNT=$(gcloud projects list --format json | jq .[].name | tr -d \" | wc -l)
 if (( PROJECT_COUNT == 1)); then
-  PROJECT_NAME=$(gcloud projects list --format json | jq .[].name | tr -d \" )
+  PROJECT_NAME=$(gcloud projects list --format json | jq .[].projectId | tr -d \" )
   echo "Using project $PROJECT_NAME"
 fi
 if [[ -z $PROJECT_NAME ]]; then
@@ -111,5 +111,5 @@ else
 fi
 
 # connect to cluster
-gcloud container clusters get-credentials $CLUSTER_NAME 
+gcloud container clusters get-credentials $CLUSTER_NAME
 echo 'source <(kubectl completion bash)' >> ~/.bashrc && source ~/.bashrc
