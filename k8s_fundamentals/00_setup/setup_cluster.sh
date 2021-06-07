@@ -21,6 +21,10 @@ gcloud config set project $PROJECT_NAME
 gcloud config set compute/region $REGION
 gcloud config set compute/zone $ZONE
 
+# enable services
+gcloud services enable compute.googleapis.com
+gcloud services enable container.googleapis.com
+
 # create networks
 response_network=`gcloud compute networks list --filter="name=$NETWORK_NAME" --format="value(name)" --project=$PROJECT_NAME`
 
