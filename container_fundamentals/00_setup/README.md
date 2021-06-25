@@ -2,7 +2,7 @@
 
 ## Run the setup.sh bash script
 
-You wil be asked about the project name. 
+You wil be asked about the project name.
 
 ```bash
 ./setup.sh
@@ -15,9 +15,8 @@ Visit https://console.cloud.google.com/compute/instances and click the `Connect 
 ## Install docker
 
 ```bash
-sudo apt update
-sudo apt upgrade -y
-sudo apt install -y docker.io
+curl -fsSL https://get.docker.com -o get-docker.sh
+sh get-docker.sh
 ```
 
 ## Add your user to the docker group
