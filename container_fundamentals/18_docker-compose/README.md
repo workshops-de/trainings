@@ -1,12 +1,12 @@
 # Docker Compose
 
-In this course we will install a minimal Prometheus stack via Docker Compose. 
+In this course we will install a minimal Prometheus stack via Docker Compose.
 
 ## Install Docker Compose
 
 ```bash
 # Get Docker Compose
-sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 # Make Docker Compose executable
 sudo chmod +x /usr/local/bin/docker-compose
 # Verify the installation
