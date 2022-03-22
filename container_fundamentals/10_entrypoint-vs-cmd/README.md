@@ -18,7 +18,7 @@ docker run -it --rm --name entrypoint-vs-cmd entrypoint-vs-cmd:1.0.0
 ### Adapt the Dockerfile like this
 
 ```docker
-FROM ubuntu:20.10
+FROM ubuntu:20.04
 ENTRYPOINT [ "echo" ]
 CMD [ "hello docker" ]
 ```

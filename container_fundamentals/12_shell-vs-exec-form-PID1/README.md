@@ -2,7 +2,7 @@
 
 In this training you will learn the difference between shell and exec form concerning PID1.
 
-## Inspect the Dockerfile 
+## Inspect the Dockerfile
 
 ## Build the image
 

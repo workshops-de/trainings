@@ -17,6 +17,7 @@ docker run -it -d -p 80:80 my-webserver:1.0.0
 ```
 
 Verify the output with curl:
+
 ```bash
 curl localhost:80
 ```

@@ -12,9 +12,10 @@ docker build -t my-image:1.0.0 .
 
 The instruction `-t my-image:1.0.0` defines the name and the version of the resulting image.
 
-The instrucition `.` tells the build process the location of the build context. 
+The instrucition `.` tells the build process the location of the build context.
 
 View the stored images on your host
+
 ```bash
 docker images
 ```
