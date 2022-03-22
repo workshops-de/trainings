@@ -3,11 +3,13 @@
 In this training you will start a container and install a web server into it.
 
 ## Run an ubuntu container
+
 ```bash
-docker run -it -p 80:80 ubuntu:20.10
+docker run -it -p 80:80 ubuntu:20.04
 ```
 
 ## Install a web server
+
 ```bash
 apt update && apt install -y apache2
 ```
@@ -18,7 +20,7 @@ apt update && apt install -y apache2
 apache2ctl -DFOREGROUND
 ```
 
-## Visit the welcome page in your browser 
+## Visit the welcome page in your browser
 
 To get the external IP you can visit https://console.cloud.google.com/networking/addresses/.
 

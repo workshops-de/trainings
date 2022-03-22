@@ -10,7 +10,7 @@ You wil be asked about the project name.
 
 ## SSH into the new VM
 
-Visit https://console.cloud.google.com/compute/instances and click the `Connect SSH` button.
+Exectute `gcloud compute ssh --zone "europe-west3-a" "training-cf"` in Cloud Shell to connect to your VM.
 
 ## Install docker
 

@@ -13,7 +13,7 @@ docker search nginx
 You can pull an image from docker hub (default registry for docker images) to your local machine. Afterwards you can create containers of it.
 
 ```bash
-docker pull nginx:1.19.2
+docker pull nginx:1.21.6
 ```
 
 ## List local images
@@ -25,23 +25,29 @@ docker images
 ## Removing a local image
 
 Lets start a container
+
 ```bash
-docker run -d nginx:1.19.2
+docker run -d nginx:1.21.6
 ```
 
 Try to remove the local image
+
 ```bash
-docker rmi nginx:1.19.2
+docker rmi nginx:1.21.6
 ```
+
 This will not work out due to the image is currently in use
 
 Remove all running containers
+
 ```bash
 docker rm -f $(docker ps -qa)
 ```
+
 The inline command `docker ps -qa` returns the container id of all containers.
 
 Try again to remove the image
+
 ```bash
-docker rmi nginx:1.19.2
+docker rmi nginx:1.21.6
 ```
