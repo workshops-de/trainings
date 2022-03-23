@@ -3,8 +3,9 @@
 ## Inspect the logs of a running container
 
 ### Create a container
+
 ```bash
-docker run -d --name redis redis:6.0.8
+docker run -d --name redis redis:6.2.6
 ```
 
 ### Get the logs of the container
@@ -19,7 +20,7 @@ docker logs redis
 docker logs -f redis
 ```
 
-## Globally customize the log-driver 
+## Globally customize the log-driver
 
 You can costumize the log-driver in the file `/etc/docker/daemon.json` via these options:
 
@@ -28,7 +29,7 @@ You can costumize the log-driver in the file `/etc/docker/daemon.json` via these
   "log-driver": "json-file",
   "log-opts": {
     "max-size": "10m",
-    "max-file": "3" 
+    "max-file": "3"
   }
 }
 ```
@@ -39,15 +40,16 @@ This sets the log-driver to `json-file` which is the default. Furthermore you ca
 
 ### Syslog log-driver
 
-The Syslog log driver will write all the container logs to the central syslog on 
-the host. This log-driver is designed to be used when syslog is being collected and 
+The Syslog log driver will write all the container logs to the central syslog on
+the host. This log-driver is designed to be used when syslog is being collected and
 aggregated by an external system.
 
 ```bash
-docker run -d --name redis-syslog --log-driver=syslog redis:6.0.8
+docker run -d --name redis-syslog --log-driver=syslog redis:6.2.6
 ```
 
 You can get the logs via
+
 ```bash
 cat /var/log/syslog | grep <CONTAINER_ID>
 ```
@@ -55,7 +57,7 @@ cat /var/log/syslog | grep <CONTAINER_ID>
 ### Disable logging
 
 ```bash
-docker run -d --name redis-none --log-driver=none redis:6.0.8
+docker run -d --name redis-none --log-driver=none redis:6.2.6
 ```
 
 ## Inspect the log-driver
