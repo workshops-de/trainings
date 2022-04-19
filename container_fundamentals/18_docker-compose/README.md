@@ -2,17 +2,6 @@
 
 In this course we will install a minimal Prometheus stack via Docker Compose.
 
-## Install Docker Compose
-
-```bash
-# Get Docker Compose
-sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-# Make Docker Compose executable
-sudo chmod +x /usr/local/bin/docker-compose
-# Verify the installation
-docker-compose version
-```
-
 ## Inspect the file `prometheus.yml`
 
 ## Inspect the Docker Compose file called `docker-compose.yml`
@@ -25,9 +14,14 @@ docker-compose up -d
 docker ps
 # Check the exposed metrics of CAdvisor
 curl localhost:8080/metrics
-# Visit Grafana in your Browser (User admin, Password admin)
-http://<EXTERNAL-IP>
 ```
+
+## Visit Grafana in your Browser
+
+Use webpreview to access grafana. Remember to use port 8081.
+Default credentials for grafana are:
+User: admin
+Password: admin
 
 ## Create a Datasource
 

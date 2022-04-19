@@ -5,13 +5,13 @@ In this training you will start a container and install a web server into it.
 ## Run an ubuntu container
 
 ```bash
-docker run -it -p 80:80 ubuntu:20.04
+docker run -it -p 8080:80 ubuntu:20.04
 ```
 
 ## Install a web server
 
 ```bash
-apt update && apt install -y apache2
+apt update && DEBIAN_FRONTEND=noninteractive apt install -y apache2
 ```
 
 ## Run the web server
@@ -22,7 +22,7 @@ apache2ctl -DFOREGROUND
 
 ## Visit the welcome page in your browser
 
-To get the external IP you can visit https://console.cloud.google.com/networking/addresses/.
+Use the webpreview feature of Google Cloud Shell to access the container.
 
 ## Stop the process in the Docker container
 
